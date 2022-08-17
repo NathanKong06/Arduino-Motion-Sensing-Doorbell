@@ -129,7 +129,7 @@ int UltrasonicStates(int ustate) {
       duration = pulseIn(4, HIGH);
       distance_inch = duration * 0.013464 / 2; 
       if (!bellFlag){
-        if (distance_inch <= 10){ //If someone is within 5 inches of sensor
+        if (distance_inch <= 10){ //If someone is within 10 inches of sensor
           motionFlag = 1;
           lcd.setCursor(0,0);
           lcd.print("Motion Alert: ");
